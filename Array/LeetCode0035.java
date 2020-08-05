@@ -22,5 +22,28 @@ public class LeetCode0035 {
             }
         }
         return i;
+        //二分法
+        /*
+        int left = 0;
+        int right = nums.length-1;
+
+        while(left <= right) {
+            int mid = (left + right) / 2;
+            if(mid == 0 && nums[mid] >= target) {
+                return 0;
+            }
+            if(mid == nums.length-1 && nums[mid] < target) {
+                return nums.length;
+            }
+            if(nums[mid] >= target && nums[mid-1] < target) {
+                return mid;
+            } else if(nums[mid] >= target && nums[mid-1] >= target){
+                right = mid-1;
+            } else {
+                left = mid+1;
+            }
+        }
+        return -1;
+        */
     }
 }
