@@ -13,11 +13,10 @@ public class LeetCode0002 {
         ListNode l2 = buildListNode(input2);
 
         ListNode output = addTwoNumbers(l1, l2);
-        while (output.next != null) {
+        while (output != null) {
             System.out.println(output.val);
             output = output.next;
         }
-        System.out.println(output.val);
     }
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
