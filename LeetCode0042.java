@@ -19,9 +19,8 @@ public class LeetCode0042 {
 
         int ans = 0;
         int len = height.length;
-        int[] Lmax, Rmax;
-        Lmax = new int[len];
-        Rmax = new int[len];
+        int[] Lmax = new int[len];
+        int[] Rmax = new int[len];
         Lmax[0] = height[0];
         Rmax[len - 1] = height[len - 1];
         //找到左边最大高度
