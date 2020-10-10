@@ -14,14 +14,19 @@
 	  / \   \
 	 5   4   7
  * */
+
 public class LeetCode0617 {
+    public static int index = 0;
+    public static int[] TREE_VALUE1 = new int[]{1, 3, 5, 0, 0, 0, 2, 0, 0};
+    public static int[] TREE_VALUE2 = new int[]{2, 1, 0, 4, 0, 0, 3, 0, 7, 0, 0};
+
     public static void main(String args[]) {
         TreeNode t1 = new TreeNode();
-        t1 = createTree(t1, TreeValue.index, TreeValue.TREE_VALUE1);
+        t1 = createTree(t1, index, TREE_VALUE1);
         //output(t1);
-        TreeValue.index = 0;
+        index = 0;
         TreeNode t2 = new TreeNode();
-        t2 = createTree(t2, TreeValue.index, TreeValue.TREE_VALUE2);
+        t2 = createTree(t2, index, TREE_VALUE2);
         //output(t2);
         TreeNode t = mergeTrees(t1, t2);
         output(t);
@@ -48,9 +53,9 @@ public class LeetCode0617 {
         }
 
         TreeNode leftChild = new TreeNode();
-        node.left = createTree(leftChild, ++TreeValue.index, TREE_VALUE);
+        node.left = createTree(leftChild, ++index, TREE_VALUE);
         TreeNode rightChild = new TreeNode();
-        node.right = createTree(rightChild, ++TreeValue.index, TREE_VALUE);
+        node.right = createTree(rightChild, ++index, TREE_VALUE);
 
         return node;
     }
@@ -62,10 +67,4 @@ public class LeetCode0617 {
         output(t.left);
         output(t.right);
     }
-}
-
-class TreeValue {
-    public static int index = 0;
-    public static int[] TREE_VALUE1 = new int[]{1, 3, 5, 0, 0, 0, 2, 0, 0};
-    public static int[] TREE_VALUE2 = new int[]{2, 1, 0, 4, 0, 0, 3, 0, 7, 0, 0};
 }
