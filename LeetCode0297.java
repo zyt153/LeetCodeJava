@@ -8,8 +8,6 @@
  * Output: Same as input
  * */
 
-import com.sun.source.tree.Tree;
-
 public class LeetCode0297 {
     public static int index = 0;
     public static int[] TREE_VALUE = new int[]{1, 2, 0, 0, 3, 4, 0, 0, 5, 0, 0};
