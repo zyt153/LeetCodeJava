@@ -33,6 +33,7 @@ public class LeetCode0072 {
                 else if (word1.charAt(i - 1) == word2.charAt(j - 1))
                     dp[i][j] = dp[i - 1][j - 1];
                 else
+                    //行列表示增加或删除，对角线表示一次替换
                     dp[i][j] = Math.min(dp[i - 1][j], Math.min(dp[i][j - 1], dp[i - 1][j - 1])) + 1;
             }
         }
