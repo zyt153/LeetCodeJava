@@ -14,7 +14,7 @@ public class LeetCode0621 {
         System.out.println(leastInterval(tasks, n));
     }
 
-    //优化
+    //优化——填桶
     public static int leastInterval_new(char[] tasks, int n) {
         int[] map = new int[26];
         for (char c: tasks)
