@@ -35,6 +35,8 @@ public class LeetCode0207 {
         * 未被 DFS 访问：i == 0；
         * 已被其他节点启动的 DFS 访问：i == -1；
         * 已被当前节点启动的 DFS 访问：i == 1。
+        * 当 flag[i] == -1，说明当前访问节点已被其他节点启动的 DFS 访问，无需再重复搜索，直接返回 TrueTrue。
+        * 当 flag[i] == 1，说明在本轮 DFS 搜索中节点 i 被第 22 次访问，即 课程安排图有环 ，直接返回 FalseFalse。
         */
         if (flags[i] == 1)
             return false;
