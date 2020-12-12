@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class LeetCode0045 {
     public static void main(String args[]) {
-        int[] nums = {2, 3, 0, 1, 4};
+        int[] nums = {2, 3, 0, 1, 4, 1};
         System.out.println(jump(nums));
     }
 
@@ -39,7 +39,7 @@ public class LeetCode0045 {
 
         int end = 0;
         int steps = 0;
-        int maxPosition = 0;
+        int maxPosition = 0;        // 当前能够到达的最大下标位置
         for (int i = 0; i < length; i++) {
             maxPosition = Math.max(maxPosition, nums[i] + i);
             if (maxPosition >= length - 1)
