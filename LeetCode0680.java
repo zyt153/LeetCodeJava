@@ -33,4 +33,43 @@ public class LeetCode0680 {
         }
         return true;
     }
+    
+    /* 一个更快的方法
+    public static boolean validPalindrome(String s) {
+        return getNumDeletes(s, 0, s.length() - 1) < 2;
+    }
+
+    private static int getNumDeletes(String s, int left, int right) {
+        if (left == right) {
+            return 0;
+        }
+
+        int l = left;
+        int r = right;
+        while (l < r) {
+            if (s.charAt(l) != s.charAt(r)) {
+                if (s.charAt(l) == s.charAt(r - 1)) {
+                    int subDel = getNumDeletes(s, l, r - 1) + 1;
+
+                    if (subDel < 2) {
+                        return subDel;
+                    }
+                }
+
+                if (s.charAt(l + 1) == s.charAt(r)) {
+                    int subDel = getNumDeletes(s, l + 1, r) + 1;
+
+                    if (subDel < 2) {
+                        return subDel;
+                    }
+                }
+
+                return 2;
+            }
+            l++;
+            r--;
+        }
+        return 0;
+    }
+    */
 }
